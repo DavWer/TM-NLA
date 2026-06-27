@@ -1,0 +1,12 @@
+# Install a PyTorch build appropriate for your hardware first, then install
+# these project dependencies. PyTorch wheels vary by CUDA/CPU/MPS target, so
+# this repo intentionally does not pin a single public torch build here.
+
+transformers>=4.57.0,<6
+numpy>=1.26.0
+accelerate>=0.27.0
+qwen-vl-utils>=0.0.14
+av>=12.0.0
+pillow>=10.0.0
+tqdm>=4.66.0
+sentencepiece>=0.2.0

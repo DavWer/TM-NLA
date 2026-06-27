@@ -1,0 +1,29 @@
+{
+  "repository_name": "TM-NLA",
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "precision": {
+    "qwen": "fp16",
+    "language_forward": "fp32"
+  },
+  "checkpoints": {
+    "repository": "https://huggingface.co/davwer/tm-nla-checkpoints",
+    "temporal_probe": "checkpoints/temporal_probe.pt",
+    "activation_verbalizer": "checkpoints/activation_verbalizer.pt",
+    "text_reconstructor": "checkpoints/text_reconstructor.pt"
+  },
+  "checkpoint_sha256": {
+    "temporal_probe.pt": "48AABF662423EA529C985855EA54970A9CE3256EC3F14AFE0169C2BF1A55B217",
+    "activation_verbalizer.pt": "88DDB0267AE535A287755DE5C9E638EB771FFD5C5377051ACFCADF96A98C08C1",
+    "text_reconstructor.pt": "C5CEA721A2173DCA884617258BB3F671668CF13EBA07728E11C39C9695B5DE32"
+  },
+  "inference": {
+    "target_layer": 20,
+    "num_windows": 9,
+    "target_key": "h_temporal",
+    "candidates_per_window": 16,
+    "max_new_tokens": 12,
+    "sampling_temperature": 0.6,
+    "top_p": 0.9,
+    "include_deterministic_candidate": true
+  }
+}

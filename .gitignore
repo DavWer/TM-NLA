@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+local_notes/
+
+outputs/
+analysis/
+cache/
+hf_upload/
+
+# Keep model weights local unless you intentionally publish them separately.
+checkpoints/*.pt
+checkpoints/*.bin
+checkpoints/*.safetensors
+
+# Demo videos can be user-owned or dataset-licensed; do not commit by default.
+videos/
+*.avi
+*.mp4
+*.mov
+*.MOV
+
+# Keep public demo examples selected/readout-focused.
+**/candidates_scored.csv
+**/candidate_diagnostics.csv
